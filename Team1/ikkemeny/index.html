@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Metadata-->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <!-- Bootstrap-->
+    <!-- CSS-->
+    <link rel='stylesheet' href='static/style.css'>
+    <link rel='stylesheet' href='static/kstyle.css'>
+
+    <!-- JavaScript-->
+    <script src="lib/js/java.js"></script>
+    <script src="lib/js/"></script>
+    <script src="lib/js/light-dark-theme.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="upborder">
+            <img src="ikkeMenyIMG/ikkeMenyLogo.png" alt="ikkemeny log.png"></a>
+            <div id="closeShoppingCart" class="trashcart" onclick="closeShoppingCart()"><img
+                    src="ikkeMenyIMG/trashcart.png" alt="trashcar.png"></a></div>
+        </div>
+        <h3 class="band-logo">Ikke Meny AS</h3>
+        <p class="slogan">Søppel mat til søppel priser + Verdens billigste A5 Wague!</p>
+    </header>
+    <main>
+
+        <aside class="shopping-cart">
+
+
+            <div class='wrapper-container'> 
+                <h2>Handlekurv</h2>
+                <div id="cart" class='wrapper-item'>
+                </div>
+                <div class="total-products">Antall: <span id="total-products-count">0</span></div>
+                <div class="total-price">
+                    <button class="removeFromCartButton" onclick="removeFromCart()">
+                        <i class="bi bi-trash3-fill"></i> Fjern fra handlekurven</button>
+                </div>
+                <br />
+
+                <div>Totalt:</div>
+                <div>0 kr</div>
+            </div>
+            </div>
+        </aside>
+
+        <section>
+            <div class="flex-box">
+                <div class="flex-item">
+                    <img src="ikkeMenyIMG/joikaBoller.JPG" alt="joikaBoller.JPG">
+                    <p>Pris: KG:</p>
+                    <button onclick="addToCart('a')"><i class="bi bi-basket2"></i> Legg til i handlekurv</button>
+                </div>
+                <div class='flex-item'>
+                    <img src="ikkeMenyIMG/vintagePepsi.png" alt="vintagePepsi.png">
+                    <p>Pris: KG:</p>
+                    <button onclick="addToCart('b')"><i class="bi bi-basket2"></i> Legg til i handlekurv</button>
+                </div>
+                <div class="flex-item">
+                    <img src="ikkeMenyIMG/slightlyOldApple.jfif" alt="slightlyOldApple.jfif">
+                    <p>Pris: KG:</p>
+                    <button onclick="addToCart('c')"><i class="bi bi-basket2"></i> Legg til i handlekurv</button>
+                </div>
+
+                <div class="flex-item">
+                    <img src="ikkeMenyIMG/a5Wague.jpg" alt="A5 Wagyu">
+                    <p>Pris KG:100 1kr (utsolgt)</p>
+                    <button disabled><i class="bi bi-basket2"></i> Legg til i handlekurv</button>
+                </div>
+                <img src="ikkeMenyIMG/" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer>Project by : @krigjo25, @yaniss, @Amy, @Nico</footer>
+
+</body>
+
+</html>

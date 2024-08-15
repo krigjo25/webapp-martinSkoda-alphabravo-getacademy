@@ -1,0 +1,88 @@
+/*-----------------------------------Styling Hjemmeside--------------------------------------------*/
+
+body {
+  box-sizing: border-box;
+  background-color: rgb(255, 238, 216);
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 200px;
+  grid-auto-rows: auto;
+  grid-template-areas: "product cart";
+}
+
+section .flex-box {
+  display: flex;
+}
+
+/*----------------------------------Styling Produkter----------------------------------------------*/
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-around;
+}
+
+.flex-item {
+  /*Må fylles*/
+  box-flex: 1 1 100px;
+  margin: 5px;
+}
+
+/*---------------------------------------Styling IMG------------------------------------------------*/
+
+section img {
+  block-size: 20vh;
+  inline-size: 20vh;
+  border: 2px solid rgb(85, 85, 85);
+ 
+}
+
+header img {
+  block-size: 10vh;
+  inline-size: 15vh;
+}
+
+/*-----------------------------------Styling Handlekurv--------------------------------------------*/
+
+/*.shopping-cart{
+    border: 5px;
+    border-color: green;
+    align-self: auto flex-end;
+} */
+
+/*------------------------------------Styling Buttons-----------------------------------------------*/
+
+button {
+  padding: 0.5vh;
+  block-size: 4vh;
+  inline-size: 11vh;
+  color: #fefefe;
+  background-color: green;
+  border-radius: 10%;
+}
+
+.removeFromCartButton {
+  padding: 0.5vh;
+  block-size: 4vh;
+  inline-size: 11vh;
+  color: #fefefe;
+  background-color: green;
+  border-radius: 10%;
+}
+
+/*--------------------------------------Styling Text Header------------------------------------------*/
+
+.header {
+  padding: 2px;
+  border: 2px;
+}
+
+.hide{
+    display: none;
+
+}
+
+
