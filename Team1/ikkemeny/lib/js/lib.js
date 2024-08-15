@@ -1,6 +1,6 @@
 
 //  Initializing the project's object
-let itemName = [{name:"slightly Old Apple", price:20, qty: 0},{name:"Joika Boller", price:30, qty: 0},{ name:"Vintage Pepsi",price:40, qty: 0}];
+let itemName = [{name:"slightly Old Apple", price:70, qty: 0},{name:"Joika Boller", price:50, qty: 0},{ name:"Vintage Pepsi",price:25.4, qty: 0}];
 
 function addToCart(productName) {
   // @Nico
@@ -8,20 +8,13 @@ function addToCart(productName) {
 
   const item = document.createElement("p");
 
-  //  Kriss
-  console.log(item.classList);
-  for (cls of item.classList)
-  {
-    console.log(cls)
-  }
-
+  // edited : Gjorde funksjonen litt mer dynamisk @krigjo25
   for (let i = 0; i < itemName.length; i++)
   {
     // Ensure its the same product
     if (productName == itemName[i].name)
     {
       // Lager et nytt produkt
-
       item.innerHTML = itemName[i].name + " x" + itemName[i].qty + " $" + itemName[i].price;
     }
 
@@ -34,6 +27,7 @@ function addToCart(productName) {
   removeCart(item, productName);  
   }
 
+  //  Append button and item 
   item.appendChild(removeButton);
 
   const cart = document.getElementById("cart");
@@ -45,10 +39,6 @@ function removeCart(item, name) {
   // Når den får input fra addtocart
   if (item)
     {
-      //  RemoveChild
-     
-      const cart = document.getElementById("cart");
-      cart.removeChild(item);
 
       //  Edited : using another variable
       for (let i = 0; i < itemName.length; i++)
@@ -58,31 +48,35 @@ function removeCart(item, name) {
           {
             //  Decrease quanity
             itemName[i].qty--;
-            total = calcualteProduct();
-            if (itemName[i].qty == 0)
+
+            //  Calculate total products
+            product = calculatetotalProducts();
+            price = calcualteTotalAmmount();
+
+            //  Ensure 
+            if (product == 0)
             {
               document.getElementById("total-products").textContent = "Tom HandleKurv";
             } else {
     
-              document.getElementById("total-products").textContent = "Antall varer : " + itemName[i].qty + " Total pris : $" + total;
+              document.getElementById("total-products").textContent = "Antall varer : " + product + " Total pris : $" + price;
             }
             
           }
       
-        }
-       
+      }
+       //  RemoveChild
+      const cart = document.getElementById("cart");
+      cart.removeChild(item);
     }
-
   else
   {
-    console.log('Error can not find item')
+    console.log('Error : can not find item')
   }
 }
+
 // Ferdig
 function updateTotalProducts(name) {
-  
-  let total = 0;
-
 
     //  Updating quanity & find total
   for (let i = 0; i < itemName.length; i++)
@@ -91,42 +85,45 @@ function updateTotalProducts(name) {
       {
         //  Increase quanity
         itemName[i].qty++;
-
       }
-
-    //  find total
-    total = calcualteProduct();
-
   }
+  //  find total
+  price = calcualteTotalAmmount();
+  product = calculatetotalProducts();
 
-  const cart = document.getElementById("cart");
-  const p = cart.getElementsByTagName("p").length+1
-
-  document.getElementById("total-products").textContent = "Antall varer : " + p + " Total pris : $" + total;
+  document.getElementById("total-products").textContent = "Antall varer : " + product + " Total pris : $" + price;
   
 }
-// Working fine !
-function calcualteProduct() {
+
+function calculatetotalProducts()
+{
+      //  Initializing variable
+      let total = 0;
+
+      //  Updating quanity
+      for (let i = 0; i < itemName.length; i++)
+        {
+          //  Calculate and add
+          total += itemName[i].qty;
+        }
+        return total;
+}
+
+function calcualteTotalAmmount() {
 
     //  Initializing variable
     let total = 0;
-    let totalProductprice = 0;
 
     //  Updating quanity
-    for(let i = 0; i < itemName.length; i++)
+    for (let i = 0; i < itemName.length; i++)
       {
-
         //  Calculate and add
-        totalProductprice += (itemName[i].qty * itemName[i].price);
+        total += (itemName[i].qty * itemName[i].price);
       }       
-       
-        total += totalProductprice;
 
       return total;
-
 }
 
-//  Ferdig KG
 function toggleShoppingCart()
 {
   //  Fetch element to show
