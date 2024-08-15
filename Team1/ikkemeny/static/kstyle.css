@@ -2,7 +2,6 @@
 
 .shopping-cart {
   grid-area: cart;  
-  display: flex  ;
   justify-content: center;  
   border: solid 5px;
   border-color: green;
@@ -10,10 +9,6 @@
   text-align: center;
   height: auto;
   background-color: rgb(147, 147, 150);
-}
-aside {
-  display: end;
-  
 }
 
 .removeFromCartButton {
