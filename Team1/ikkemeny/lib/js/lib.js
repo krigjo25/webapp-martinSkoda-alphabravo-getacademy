@@ -2,8 +2,8 @@
 //  Initializing the project's object
 let itemName = [
 
-              {name:"slightly Old Apple", price:70, qty: 0},
-              {name:"Joika Boller", price:50, qty: 0},
+              {name:"slightly Old Apple", price:70.23, qty: 0},
+              {name:"Joika Boller", price:50.7, qty: 0},
               {name:"Vintage Pepsi",price:25.4, qty: 0}];
 
 function addToCart(productName)
@@ -20,7 +20,7 @@ function addToCart(productName)
     if (productName == itemName[i].name)
     {
       // Creating a new product
-      item.textContent = itemName[i].name + " x" + itemName[i].qty + " $" + itemName[i].price;
+      item.textContent = itemName[i].name + " x" + itemName[i].qty + " kr " + itemName[i].price;
     }
 
   }
@@ -65,7 +65,7 @@ function removeCart(item, name)
               document.getElementById("total-products").textContent = "Tom HandleKurv";
             } else {
     
-              document.getElementById("total-products").textContent = "Antall varer : " + product + " Total pris : $" + price;
+              document.getElementById("total-products").textContent = "Antall varer : " + product + " Total pris : kr " + price;
             }
             
           }
@@ -81,11 +81,11 @@ function removeCart(item, name)
   }
 }
 
-// Ferdig
+
 function updateTotalProducts(name)
 {
 
-    //  Updating quanity & find total
+    //Edited:  Updating quanity & find total
   for (let i = 0; i < itemName.length; i++)
   {
     if (name == itemName[i].name)
@@ -94,14 +94,14 @@ function updateTotalProducts(name)
         itemName[i].qty++;
       }
   }
-  //  find total
+  //Edited: Find total ammount and total Products
   price = calcualteTotalAmmount();
   product = calculatetotalProducts();
 
   document.getElementById("total-products").textContent = "Antall varer : " + product + " Total pris : $" + price;
   
 }
-
+// @krigjo25
 function calculatetotalProducts()
 {
       //  Initializing variable
@@ -115,7 +115,7 @@ function calculatetotalProducts()
         }
         return total;
 }
-
+// @krigjo25
 function calcualteTotalAmmount()
 {
     //  Initializing variable
@@ -130,7 +130,7 @@ function calcualteTotalAmmount()
 
       return total;
 }
-
+// @krigjo25
 function toggleShoppingCart()
 {
   //  Fetch element to show
