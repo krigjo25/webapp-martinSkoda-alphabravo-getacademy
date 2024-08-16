@@ -1,4 +1,3 @@
-
 //  Initializing the project's object
 let itemName = [
 
