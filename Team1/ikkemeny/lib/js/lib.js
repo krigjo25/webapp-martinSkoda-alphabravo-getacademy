@@ -6,20 +6,21 @@ let itemName = [
               {name:"Joika Boller", price:50, qty: 0},
               {name:"Vintage Pepsi",price:25.4, qty: 0}];
 
-function addToCart(productName) {
+function addToCart(productName)
+{
   // @Nico
   updateTotalProducts(productName);
 
   const item = document.createElement("p");
 
-  // edited : Gjorde funksjonen litt mer dynamisk @krigjo25
+  // edited : Gjorde funksjonen litt mer dynamisk i forhold til objektet @krigjo25
   for (let i = 0; i < itemName.length; i++)
   {
     // Ensure its the same product
     if (productName == itemName[i].name)
     {
-      // Lager et nytt produkt
-      item.innerHTML = itemName[i].name + " x" + itemName[i].qty + " $" + itemName[i].price;
+      // Creating a new product
+      item.textContent = itemName[i].name + " x" + itemName[i].qty + " $" + itemName[i].price;
     }
 
   }
@@ -38,7 +39,8 @@ function addToCart(productName) {
   cart.appendChild(item);
 }
 
-function removeCart(item, name) {
+function removeCart(item, name)
+{
 
   // Når den får input fra addtocart
   if (item)
@@ -80,7 +82,8 @@ function removeCart(item, name) {
 }
 
 // Ferdig
-function updateTotalProducts(name) {
+function updateTotalProducts(name)
+{
 
     //  Updating quanity & find total
   for (let i = 0; i < itemName.length; i++)
@@ -113,8 +116,8 @@ function calculatetotalProducts()
         return total;
 }
 
-function calcualteTotalAmmount() {
-
+function calcualteTotalAmmount()
+{
     //  Initializing variable
     let total = 0;
 
