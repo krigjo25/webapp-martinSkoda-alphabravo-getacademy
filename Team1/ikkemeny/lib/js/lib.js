@@ -19,7 +19,7 @@ function addToCart(productName)
     if (productName == itemName[i].name)
     {
       // Creating a new product
-      item.textContent = itemName[i].name + " x" + itemName[i].qty + " kr " + itemName[i].price;
+      item.textContent = itemName[i].name + " x 1 kr" + itemName[i].price;
     }
 
   }
