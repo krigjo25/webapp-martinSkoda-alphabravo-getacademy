@@ -1,6 +1,10 @@
 
 //  Initializing the project's object
-let itemName = [{name:"slightly Old Apple", price:70, qty: 0},{name:"Joika Boller", price:50, qty: 0},{ name:"Vintage Pepsi",price:25.4, qty: 0}];
+let itemName = [
+
+              {name:"slightly Old Apple", price:70, qty: 0},
+              {name:"Joika Boller", price:50, qty: 0},
+              {name:"Vintage Pepsi",price:25.4, qty: 0}];
 
 function addToCart(productName) {
   // @Nico
