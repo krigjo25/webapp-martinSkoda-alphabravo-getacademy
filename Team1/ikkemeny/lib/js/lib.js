@@ -97,7 +97,7 @@ function updateTotalProducts(name)
   price = calcualteTotalAmmount();
   product = calculatetotalProducts();
 
-  document.getElementById("total-products").textContent = "Antall varer : " + product + " Total pris : $" + price;
+  document.getElementById("total-products").textContent = "Antall varer : " + product + " Total pris : kr" + price;
   
 }
 // @krigjo25
