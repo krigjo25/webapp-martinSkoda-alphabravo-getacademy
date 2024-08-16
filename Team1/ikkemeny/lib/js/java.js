@@ -1,23 +1,41 @@
 function addToCart(productName) {
   // @Nico
-  //  cart is constant = ->
+  // Finner handlekurv-elementet i DOM og lagrer det som en konstant
   const cart = document.getElementById("cart");
+  
+  // @Nico
+  // Oppretter et nytt paragraf-element som skal inneholde produktnavnet
   const item = document.createElement("p");
+  
+  // @Nico
+  // Setter tekstinnholdet til paragrafen lik produktnavnet som ble gitt som argument
   item.textContent = productName;
-
-  //  Forklaring pls
+   
+  // @Nico
+  // Oppretter en knapp for å fjerne produktet fra handlekurven
   const removeButton = document.createElement("button");
-  removeButton.textContent = "Fejrn";
+  
+  // @Nico
+  // Setter tekstinnholdet på fjern-knappen til "Fjern"
+  removeButton.textContent = "Fjern";
+  
+  // @Nico
+  // Definerer en funksjon som skal kjøre når fjern-knappen klikkes, og kaller funksjonen for å fjerne produktet
   removeButton.onclick = function() {
     removeFromCart(item);
   };
 
+  // @Nico
+  // Legger fjern-knappen til som et barn av paragraf-elementet
   item.appendChild(removeButton);
+  
+  // @Nico
+  // Legger det nye paragraf-elementet til i handlekurven
   cart.appendChild(item);
 
+  // @Nico
+  // Oppdaterer det totale antallet produkter i handlekurven ved å kalle på funksjonen
   updateTotalProducts(productName);
-
-
 }
 
   // @krigjo25
