@@ -2,8 +2,8 @@
 let itemName = [
 
               {name:"slightly Old Apple", price:70.23, qty: 0},
-              {name:"Joika Boller", price:50.7, qty: 0},
-              {name:"Vintage Pepsi",price:25.4, qty: 0}];
+              {name:"HalvSpist Jokke bolle", price:50.7, qty: 0},
+              {name:"Vintage Pepsi",price:79.4, qty: 0}];
 
 function addToCart(productName)
 {
