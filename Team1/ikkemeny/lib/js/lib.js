@@ -24,7 +24,8 @@ function addToCart(productName)
 
   }
 
-  //  @Nico // Remove button
+  // @Nico
+  // Lager en knapp for å fjerne produktet fra handlekurven
   const removeButton = document.createElement("button");
   removeButton.textContent = "Fjern";
   removeButton.onclick = function() {
