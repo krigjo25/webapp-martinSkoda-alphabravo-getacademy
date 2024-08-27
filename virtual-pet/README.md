@@ -37,6 +37,11 @@ demo: [youtube](), case: [Virtual pet](https://www.notion.so/c593f2053169460d834
 ## Credits
 
 
+##  Summary
+
+-   During this project we as a team experienced alot of challanges with the timer.
+-   We learned alot about MVC structure
+
 ### Licence
 
 Read the licence for more information
