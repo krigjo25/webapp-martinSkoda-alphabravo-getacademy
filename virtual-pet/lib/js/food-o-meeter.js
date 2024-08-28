@@ -11,6 +11,7 @@ let barometer = 100;
 function calculate_ms()
 {
     sec++
+    
     if (sec == 1)
     {
         sec = 0;
@@ -37,7 +38,7 @@ function decrease_bar()
     //  Ensure that bar-o-meeter is not below 0
     if (barometer > 0)
     {
-        barometer -=25;
+        barometer -=1;
         return foodOMeter();
     }
     return;
@@ -61,7 +62,7 @@ function foodOMeter()
     let prog = document.getElementById('progress-label');
     
     //  Manipulate the DOM
-    id.style.inlineSize = barometer;
+    id.style.inlineSize = barometer + "%";
     label.innerHTML = `${bar_warning()}`;
     prog.innerHTML = `${barometer}%`;
 
