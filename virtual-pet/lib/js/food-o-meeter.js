@@ -104,7 +104,6 @@ function main()
             <button onclick="changeImage('sad')">Sad</button>
             <button onclick="changeImage('dirty')">dirty</button>
         </div>`;
-        console.log(sec)
 
         document.getElementById('main').innerHTML = html;
         
