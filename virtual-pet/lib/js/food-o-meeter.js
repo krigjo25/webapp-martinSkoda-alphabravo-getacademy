@@ -3,14 +3,28 @@
 
 // modal
 let html = "";
-let count_food = 4;
+let barometer = 4;
+let sec = 0;
 
 //  Controller
+function calculate_ms()
+{
+    sec++
+
+    if (sec == 30)
+    {
+        sec = 0;
+        return decrease_bar();
+    }
+    return sec;
+}
+
+
 function refill_food_o_meeter()
 {
-    if (count_food < 4)
+    if (barometer < 4)
     {
-        count_food++;
+        barometer++;
     }
 
     return;
@@ -20,68 +34,83 @@ function refill_food_o_meeter()
 function decrease_bar()
 {
 
-    if (count_food > 0)
+    //  Ensure that bar-o-meeter is not below 0
+    if (barometer > 0)
     {
-        console.log(count_food);
-        count_food--;
+        barometer--;
         return foodOMeter();
     }
+    return;
 }
-
+function bar_warning()
+{
+    if (barometer == 4){return warning = "Full !";}
+    else if (barometer == 3){return warning = "Feeling a bit hungry !";}
+    else if (barometer == 2){return warning = "hangry";}
+    else if (barometer == 1){return warning = "Starving !";}
+    else if (barometer == 0){return warning = "Dead";}
+}
 // View
 
 function foodOMeter()
 {
     // Fetch the elements id.
     let id = document.getElementById('food-o-meeter');
-    console.log(count_food)
+
+    //  The best practise
+    //for (let i = 0; i < barometer.length; i++)
+    //{
+    //    html += /*HTML*/`
+    //    ${warning}
+    //    <div class="segment"></div>`;
+    //}
+
     //  Ensure the display is 100%
-    if (count_food == 4)
+    if (barometer == 4)
     {
-    //  Print out 4 bars
-    html = /*HTML*/`
-    Full:
-    <div class="segment"></div>
-    <div class="segment"></div>
-    <div class="segment"></div>
-    <div class="segment"></div>`;
+        //  Print out 4 bars
+        html = /*HTML*/`
+        Full:
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>`;
     }
     //  Ensure the display is 75%¨
-    else if (count_food == 3)
-        {
-        //  Print out 4 bars
+    else if (barometer == 3)
+    {
+        //  Print out 3 bars
         html = /*HTML*/`
         Okay!:
         <div class="segment"></div>
         <div class="segment"></div>
         <div class="segment"></div>`;
-        }
+    }
     
     //  Ensure the display is 50%¨
-    else if (count_food == 2)
-        {
+    else if (barometer == 2)
+    {
         //  Print out 2 bars
         html = /*HTML*/`
-        Starting to become hungry !
+        Starting to become hangry !
         <div class="segment"></div>
         <div class="segment"></div>`;
     }
 
     //  Ensure the display is 25%
-    else if (count_food == 1)
-        {
+    else if (barometer == 1)
+    {
         //  Print out 1 bars
         html = /*HTML*/`
         Starving !
         <div class="segment"></div>`;
         
-        }
-    else if (count_food == 0)
+    }
+
+    else if (barometer == 0)
     {
-            //  Print out 1 bars
-            html = /*HTML*/`
-            Dead !`;
-            
+        html = /*HTML*/`
+        Dead !`;
     }
 
     id.innerHTML = html;
@@ -109,20 +138,8 @@ function main()
         
         timer = setInterval(calculate_ms, 1000);
     foodOMeter();
-}
 
-let sec = 0;
-
-function calculate_ms()
-{
-    sec++
-
-    if (sec == 30)
-    {
-        sec = 0;
-        return decrease_bar();
-    }
-    return sec;
+    return
 }
 
 main();
