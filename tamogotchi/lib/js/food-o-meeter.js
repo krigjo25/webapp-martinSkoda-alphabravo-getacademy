@@ -16,7 +16,6 @@ function main()
 // View -> Reperesents the data
 function foodOMeter()
 {
-    
     //  Manipulate the DOM
     document.getElementById('progress-bar-id').style.inlineSize = barometer + "%";
     document.getElementById('food-label').innerHTML = `${bar_warning()}`;

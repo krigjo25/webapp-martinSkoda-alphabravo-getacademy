@@ -1,10 +1,10 @@
 function changeImage(state) {
     var imageElement = document.getElementById('animal-image');
     if (state == 'clean') {
-        imageElement.src = "https://cdn.discordapp.com/attachments/1268499932604796972/1277551598268059699/koala.png?ex=66cd9424&is=66cc42a4&hm=9d95ecf18731ae52bcd5afd73ffbf0ed09e965d9c167d4522b279f20cecbe736&";
-    } else if (state == 'sad') {
-        imageElement.src = "https://cdn.discordapp.com/attachments/1268499932604796972/1277552562907906058/koala_sad.png?ex=66cd950a&is=66cc438a&hm=a68312392996198a176aa1d3e11d6e79c72088c9f04b523ebe030f849e815d6f&";
-    } else if (state == 'dirty') {
-        imageElement.src = "https://cdn.discordapp.com/attachments/1268499932604796972/1277553091897589841/koala_dirty.png?ex=66cd9588&is=66cc4408&hm=5fd2fd2eed884d419690aca9108f8740568a3618444900e9a66ac6926b42bfff&";
+        imageElement.src = "lib/img/koala.png";
+    } else if (state == 'lib/img/koala_sad.png') {
+        imageElement.src = "";
+    } else if (state == 'lib/img/koala_dirty.png') {
+        imageElement.src = "";
     }
 }
