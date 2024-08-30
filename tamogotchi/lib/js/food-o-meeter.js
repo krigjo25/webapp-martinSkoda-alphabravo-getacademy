@@ -5,7 +5,27 @@ let sec = 0;
 let html = "";
 let barometer = 100;
 
-//  Controller -> Manipulates the data and view
+main();
+function main()
+{
+    //  Start the interval
+    setInterval(calculate_ms, 1000);
+    return;
+}
+
+// View -> Reperesents the data
+function foodOMeter()
+{
+    
+    //  Manipulate the DOM
+    document.getElementById('progress-bar').style.inlineSize = barometer + "%";
+    document.getElementById('food-label').innerHTML = `${bar_warning()}`;
+    document.getElementById('progress-label').innerHTML = `${barometer}%`;
+
+    return;
+}
+
+//  Controller -> Manipulates th00e data and view
 function calculate_ms()
 {
     sec++
@@ -31,7 +51,6 @@ function refill_food_o_meeter()
     }
 
     return;
-
 }
 
 function decrease_bar()
@@ -41,8 +60,9 @@ function decrease_bar()
     {
         //  Decrease bar
         barometer --;
-
-        return foodOMeter();
+    
+        foodOMeter();
+        return ;
     }
     return;
 }
@@ -57,26 +77,7 @@ function bar_warning()
     return "Starving !";
 }
 
-// View -> Reperesents the data
-function foodOMeter()
-{
-    // Fetch the DOM ids.
-    let bar = document.getElementById('progress-bar');
-    let label= document.getElementById('food-label');
-    let prog = document.getElementById('progress-label');
-    
-    //  Manipulate the DOM
-    bar.style.inlineSize = barometer + "%";
-    label.innerHTML = `${bar_warning()}`;
-    prog.innerHTML = `${barometer}%`;
 
-    return;
-}
 
-function main()
-{
-    //  Start the interval
-    setInterval(calculate_ms, 1000);
-    return;
-}
-main();
+
+
