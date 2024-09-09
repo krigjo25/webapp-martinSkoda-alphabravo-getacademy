@@ -1,0 +1,20 @@
+main aside .annoyed-bar, main aside .rep-bar, main aside .cool-bar, main aside .speedo-bar {
+  background-color: grey;
+  block-size: 2vh;
+  border-radius: 12px;
+  margin-block-end: 12px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+main div.road-map {
+  inline-size: 66vw;
+  block-size: 73vh;
+  background-image: url(../img/pathway-3596034_640.jpg);
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=style.css.map */

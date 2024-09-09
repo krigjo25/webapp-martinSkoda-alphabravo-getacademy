@@ -1,0 +1,30 @@
+%bar-o-meeter 
+    background-color: grey
+    block-size: 2vh
+    border-radius: 12px
+    margin-block-end: 12px
+main
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+    div.road-map
+        inline-size: 66vw
+        block-size: 73vh
+        background-image: url(../img/pathway-3596034_640.jpg)
+        background-repeat: no-repeat 
+
+    aside
+        .speedo-bar
+            @extend %bar-o-meeter
+
+        .cool-bar
+            @extend %bar-o-meeter
+
+        .rep-bar
+            @extend %bar-o-meeter
+        
+        .annoyed-bar
+            @extend %bar-o-meeter
