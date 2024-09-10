@@ -1,8 +1,10 @@
 %bar-o-meeter 
-    background-color: grey
     block-size: 2vh
+    user-select: none
     border-radius: 12px
     margin-block-end: 12px
+    background-color: grey
+    
 main
     display: flex
     flex-wrap: wrap
@@ -22,16 +24,7 @@ main
     aside
         
 
-        .speedo-bar
-            @extend %bar-o-meeter
-
-        .cool-bar
-            @extend %bar-o-meeter
-
-        .rep-bar
-            @extend %bar-o-meeter
-        
-        .annoyed-bar
+        .speedo-o-meter, .cool-o-meter,.rep-o-meter, .annoyed-o-meter
             @extend %bar-o-meeter
     
     img
