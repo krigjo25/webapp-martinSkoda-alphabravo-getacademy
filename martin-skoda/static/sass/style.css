@@ -1,4 +1,4 @@
-main aside .speedo-o-meter, main aside .cool-o-meter, main aside .rep-o-meter, main aside .annoyed-o-meter {
+main aside .bar-o-meeter {
   block-size: 2vh;
   -webkit-user-select: none;
      -moz-user-select: none;
