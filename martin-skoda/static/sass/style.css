@@ -15,8 +15,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
 }
 main div.road-map {
   inline-size: 66vw;
