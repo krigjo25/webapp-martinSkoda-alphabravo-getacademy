@@ -17,4 +17,10 @@ main div.road-map {
   block-size: 73vh;
   background-image: url(../img/pathway-3596034_640.jpg);
   background-repeat: no-repeat;
+}
+main aside .values {
+  margin-inline-start: 10vw;
+}
+main img {
+  inline-size: 26vw;
 }/*# sourceMappingURL=style.css.map */

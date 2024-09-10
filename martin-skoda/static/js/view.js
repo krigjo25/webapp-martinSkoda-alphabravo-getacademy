@@ -1,4 +1,5 @@
-// view -> Manipulates the images
+
+
 main();
 function main()
 {
@@ -13,6 +14,7 @@ function main()
     //  concat buddies
     html += `<div id='buddyList'>${buddy()}</div>`;
     html += `<div> Score: 0</div>`;
+    html += `<div id = "herbie">${herbie()}</div>`
 
     app.innerHTML = html;
 }
@@ -28,11 +30,14 @@ function buddy()
     return b;
 }
 
-function vehicle()
+function herbie()
 {
     return `
     <div class="user-veh"></div>
     <div="user-choices>
     <button onclick"()">Upgrade</button>
-    </div> `;
+    </div>
+    <div class="vehicle">
+        <img src="${vehicle.img}" alt="${vehicle.alt}">
+    </div>`;
 }
