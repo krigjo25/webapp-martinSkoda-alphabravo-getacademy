@@ -1,13 +1,11 @@
 //Update HTML
-
+updateView()
 function updateView(){
-    document.getElementById('app').innerHTML 0 /*HTML*/ `
+    document.getElementById('app').innerHTML = /*HTML*/ `
     
-    <header>
-    <h1>Martin skåda</h1>
-    <h3>- Hvorfor skåda? Når na kan gå'a?</h3>
-</header>
-<main>
+    <h1>Martin skoda</h1>
+    <h3>- Hvorfor skoda? Når na kan gå'a?</h3>
+
     <div class="road-map"></div>
     <aside id="values" class="values">
 
@@ -35,9 +33,8 @@ function updateView(){
             
         </div>
 
-    </aside>        
-</main> 
+    </aside>         
     
     
-    `
+    `;
 }
