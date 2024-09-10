@@ -1,8 +1,10 @@
 %bar-o-meeter 
-    background-color: grey
     block-size: 2vh
+    user-select: none
     border-radius: 12px
     margin-block-end: 12px
+    background-color: grey
+    
 main
     display: flex
     flex-wrap: wrap
@@ -20,18 +22,7 @@ main
         margin-inline-start: 10vw
 
     aside
-        
-
-        .speedo-bar
-            @extend %bar-o-meeter
-
-        .cool-bar
-            @extend %bar-o-meeter
-
-        .rep-bar
-            @extend %bar-o-meeter
-        
-        .annoyed-bar
+        .speed-o-meeter, .annoyed-o-meeter, .rep-o-meeter, .cool-o-meeter
             @extend %bar-o-meeter
     
     img

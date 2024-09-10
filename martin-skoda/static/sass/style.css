@@ -1,8 +1,11 @@
-main aside .annoyed-bar, main aside .rep-bar, main aside .cool-bar, main aside .speedo-bar {
-  background-color: grey;
+main aside .speed-o-meeter, main aside .annoyed-o-meeter, main aside .rep-o-meeter, main aside .cool-o-meeter {
   block-size: 2vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   border-radius: 12px;
   margin-block-end: 12px;
+  background-color: grey;
 }
 
 main {
