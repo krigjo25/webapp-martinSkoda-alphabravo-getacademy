@@ -1,11 +1,12 @@
+
 %bar-o-meeter 
+    text-align: center
     width: 100%
     block-size: 2vh
     user-select: none
     border-radius: 12px
     margin-block-end: 12px
-    animation:  pulse 1s infinite
-
+    background: linear-gradient(to right, red, yellow, green)
 
 header
     
@@ -13,6 +14,9 @@ header
 
     h1
         text-align: center
+
+    span:nth-child(2)
+        color: green
 
     h3
         text-align: center
@@ -38,16 +42,8 @@ main
             @extend %bar-o-meeter
     
     img
-        inline-size: 26vw
+        position: absolute
+        right: 50vw
+        bottom: 2vh
+        inline-size: 16vw
         mix-blend-mode: multiply
-
-@keyframes pulse
-    from
-        0% 
-            background-color: rgb(120, 6, 6)
-        
-        50%
-            background-color: #FFFF00
-    to
-        100%
-            background-color: rgb(102, 146, 61)
