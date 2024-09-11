@@ -1,98 +1,83 @@
-// Var and Const
-
+//yanis var const
 const carParts = [
     {
         part: "spoiler",
         coolnesFactor: 15,
         annoyedFactor: 0
     },
-
     {
         part: "Sota ruter",
         coolnesFactor: 5,
         annoyedFactor: 2
     },
-
     {
         part: "straightpipe",
         coolnesFactor: 25,
         annoyedFactor: 50
     },
-
     {
         part: "wonderbaum",
         coolnesFactor: 0,
         annoyedFactor: 0
     },
-
     {
         part: "store felger",
         coolnesFactor: 10,
         annoyedFactor: 3
     },
-
     {
         part: "basskasse",
         coolnesFactor: 0,
         annoyedFactor: 60
     },
-
     {
         part: "nye (gamle) bremseskiver",
         coolnesFactor: 0,
         annoyedFactor: 60
     },
-
     {
         part: "svampebob firkant wrapper",
         coolnesFactor: 30,
         annoyedFactor: 1
     },
-
     {
         part: "Carbonfiber Hood",
         coolnesFactor: 25,
         annoyedFactor: 0
     }
 ];
-
+//yanis
 const people = [
     {
         name: "Martin",
         likesCar: true,
         isAnnoyed: false
     },
-
     {
         name: "Terje",
         likesCar: true,
         isAnnoyed: false
     },
-
     {
         name: "Marie",
         likesCar: true,
         isAnnoyed: false
     },
-
     {
         name: "Anita",
         likesCar: true,
         isAnnoyed: false
     },
-
     {
         name: "Ellie Marie",
         likesCar: true,
         isAnnoyed: false
     },
-
     {
         name: "Eskil",
         likesCar: true,
         isAnnoyed: false
     },
-
     {
         name: "Bestemor",
         likesCar: false,
@@ -100,10 +85,10 @@ const people = [
     }
 ];
 
-//@nico Oppdatert View: Viser meldingen og hastigheten til brukeren, og oppdaterer HTML med hastigheten
+//nico View: Viser meldingen og hastigheten til brukeren, og oppdaterer HTML med hastigheten
 const view = {
-    displayEncounter: function(message, speed) {
-        // Oppdater konsollen med meldingen
+    displayEncounter: function (message, speed) {
+        // Oppdaterer meldingen i konsollen
         console.log(`${message} Bilen kjører i ${speed} km/t.`);
 
         // Oppdater hastigheten i HTML
@@ -111,8 +96,20 @@ const view = {
         if (speedDisplay) {
             speedDisplay.innerHTML = `${speed} km/t`; // Oppdater hastighetsmeteret
         }
+    },
+
+    // Funksjon for å oppdatere listen over installerte bildeler
+    updateInstalledParts: function (onCar) {
+        const partsDisplay = document.getElementById("aqured-parts");
+
+        // Opprett en liste med installerte bildeler og vis den i HTML
+        partsDisplay.innerHTML = `<ul>${onCar
+            .map((part) => `<li>${part}</li>`)
+            .join("")}</ul>`;
     }
 };
+
+//yanis
 
 const coolPrompts = [
     "Den ser utrolig ut! Er den ny?",
@@ -143,28 +140,26 @@ const isAnnoyedPrompts = [
     "Hva tenker du på? Det er ikke en racerbane her!"
 ];
 
-//let onCar = [''];
+//yanis
+let onCar = [];
 
 let counter = 0;
-
 let annoyedValue = 0;
 let coolValue = 1;
 let respectValue = 0;
 let speedValue = 0;
 
-
-
-//@nico Model: Genererer tilfeldige tall for person, bil-del, og beregner hastighet basert på coolness
+//nico Model: Genererer tilfeldige tall for person, bil-del, og beregner hastighet basert på coolness
 const model = {
-  getRandomEncounter: function(listLength) {
-      return Math.floor(Math.random() * listLength);
-  },
-  
-  // Beregner hastighet basert på bilens totale coolness factor
-  calculateSpeed: function(coolnessFactor) {
-      const minSpeed = 10; // Minimum hastighet når coolness = 0
-      const maxSpeed = 100; // Maksimum hastighet når coolness = 100
-      const speed = minSpeed + (maxSpeed - minSpeed) * (coolnessFactor / 100);
-      return Math.round(speed); // Returner avrundet hastighet
-  }
+    getRandomEncounter: function (listLength) {
+        return Math.floor(Math.random() * listLength);
+    },
+
+    // Beregner hastighet basert på bilens totale coolness factor
+    calculateSpeed: function (coolnessFactor) {
+        const minSpeed = 10; // Minimum hastighet når coolness = 0
+        const maxSpeed = 100; // Maksimum hastighet når coolness = 100
+        const speed = minSpeed + (maxSpeed - minSpeed) * (coolnessFactor / 100);
+        return Math.round(speed); // Returnerer avrundet hastighet
+    }
 };
