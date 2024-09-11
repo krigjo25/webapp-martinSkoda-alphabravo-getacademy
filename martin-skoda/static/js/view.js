@@ -6,7 +6,6 @@ function mainView() {
             <div class="road-map"></div>
             <aside id="values" class="values">
                 <div id="bar-o-meeter-container">
-                    
 
                     <div id="annoyed-label" class="annoyed-label">Grandma's annoyance:</div>
                     <div id="annoyed-o-meeter" class="annoyed-o-meeter">0%</div>

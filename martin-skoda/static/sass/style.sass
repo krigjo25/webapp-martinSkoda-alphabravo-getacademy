@@ -41,6 +41,19 @@ main
         .speed-o-meeter, .annoyed-o-meeter, .rep-o-meeter, .cool-o-meeter
             @extend %bar-o-meeter
     
+        div.aquired-parts
+            display: flex
+
+        ul
+            display: grid
+            grid-template-columns: repeat(3, 10vw)
+            column-gap: 1vw
+            row-gap: 2vh 
+            list-style-type: decimal
+
+            li
+                margin-inline-start: 1vw
+    
     img
         position: absolute
         right: 50vw

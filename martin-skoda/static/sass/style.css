@@ -39,6 +39,20 @@ main div.road-map {
 main aside.values {
   margin-inline-start: 10vw;
 }
+main aside div.aquired-parts {
+  display: flex;
+}
+main aside ul {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  -moz-column-gap: 1vw;
+       column-gap: 1vw;
+  row-gap: 2vh;
+  list-style-type: decimal;
+}
+main aside ul li {
+  margin-inline-start: 1vw;
+}
 main img {
   position: absolute;
   right: 50vw;
