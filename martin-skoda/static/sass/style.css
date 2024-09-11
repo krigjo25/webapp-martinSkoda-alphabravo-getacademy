@@ -11,17 +11,27 @@ main aside .speed-o-meeter, main aside .annoyed-o-meeter, main aside .rep-o-meet
   background-color: green;
 }
 
+header {
+  margin-block-end: 9vh;
+}
+header h1 {
+  text-align: center;
+}
+header h3 {
+  text-align: center;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 main div.road-map {
-  inline-size: 66vw;
-  block-size: 73vh;
-  background-image: url(../img/pathway-3596034_640.jpg);
+  inline-size: 46vw;
+  block-size: 71vh;
+  background-image: url("../img/Geometric_of_roads.gif");
   background-repeat: no-repeat;
 }
 main aside.values {
@@ -29,4 +39,5 @@ main aside.values {
 }
 main img {
   inline-size: 26vw;
+  mix-blend-mode: multiply;
 }/*# sourceMappingURL=style.css.map */

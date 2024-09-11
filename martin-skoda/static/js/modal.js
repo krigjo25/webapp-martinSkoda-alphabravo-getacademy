@@ -144,3 +144,14 @@ let annoyedValue = 0;
 let coolValue = 0;
 let respectValue = 0;
 let speedValue = 0;
+
+
+
+
+// Model: Genererer et tilfeldig tall for person, deretter bil-del
+const model = {
+  getRandomEncounter: function(listLength) {
+      return Math.floor(Math.random() * listLength);
+  }
+};
+
