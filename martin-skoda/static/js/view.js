@@ -38,3 +38,12 @@ function updateView(){
     
     `;
 }
+
+// View: Viser meldingen til brukeren
+const view = {
+    displayEncounter: function(message) {
+        console.log(message);
+    }
+};
+
+
