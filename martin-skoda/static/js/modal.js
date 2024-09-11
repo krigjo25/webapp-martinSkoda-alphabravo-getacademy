@@ -106,7 +106,6 @@ const people = [
 ];
 
 
-
 const coolPrompts = [
   "Den ser utrolig ut! Er den ny?",
   "Hvilken motor har du? Den høres kraftig ut!",
@@ -135,3 +134,13 @@ const isAnnoyedPrompts = [
   "Livet er ikke et videospill. Slutt å kjøre så fort!",
   "Hva tenker du på? Det er ikke en racerbane her!",
 ];
+
+
+//let onCar = [''];
+
+let counter = 0;
+
+let annoyedValue = 0;
+let coolValue = 0;
+let respectValue = 0;
+let speedValue = 0;
