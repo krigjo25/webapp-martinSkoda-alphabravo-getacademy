@@ -32,7 +32,7 @@ function mainView() {
 
 // View: Viser meldingen og hastigheten til brukeren
 const view = {
-    displayEncounter: function (message, speed) {
+    displayEncounter: function(message, speed) {
         console.log(`${message} Bilen kjører i ${speed} km/t.`);
     }
-};
+  };

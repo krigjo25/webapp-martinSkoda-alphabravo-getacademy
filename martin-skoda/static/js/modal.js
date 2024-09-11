@@ -140,15 +140,15 @@ let speedValue = 0;
 
 // Model: Genererer tilfeldige tall for person, bil-del, og beregner hastighet basert på coolness
 const model = {
-    getRandomEncounter: function (listLength) {
-        return Math.floor(Math.random() * listLength);
-    },
-
-    // Beregner hastighet basert på bilens totale coolness factor
-    calculateSpeed: function (coolnessFactor) {
-        const minSpeed = 10; // Minimum hastighet når coolness = 0
-        const maxSpeed = 100; // Maksimum hastighet når coolness = 100
-        const speed = minSpeed + (maxSpeed - minSpeed) * (coolnessFactor / 100);
-        return Math.round(speed);
-    }
+  getRandomEncounter: function(listLength) {
+      return Math.floor(Math.random() * listLength);
+  },
+  
+  // Beregner hastighet basert på bilens totale coolness factor
+  calculateSpeed: function(coolnessFactor) {
+      const minSpeed = 10; // Minimum hastighet når coolness = 0
+      const maxSpeed = 100; // Maksimum hastighet når coolness = 100
+      const speed = minSpeed + (maxSpeed - minSpeed) * (coolnessFactor / 100);
+      return Math.round(speed); // Returner avrundet hastighet
+  }
 };
