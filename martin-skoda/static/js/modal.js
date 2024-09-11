@@ -136,10 +136,10 @@ const isAnnoyedPrompts = [
   "Hva tenker du på? Det er ikke en racerbane her!",
 ];
 
-// Model: Genererer et tilfeldig tall fra 0 til 4
+// Model: Genererer et tilfeldig tall for person, deretter bil-del
 const model = {
-    getRandomEncounter: function() {
-        return Math.floor(Math.random() * 5);
-    }
+  getRandomEncounter: function(listLength) {
+      return Math.floor(Math.random() * listLength);
+  }
 };
 
