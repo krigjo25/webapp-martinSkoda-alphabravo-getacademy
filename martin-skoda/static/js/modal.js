@@ -135,3 +135,11 @@ const isAnnoyedPrompts = [
   "Livet er ikke et videospill. Slutt å kjøre så fort!",
   "Hva tenker du på? Det er ikke en racerbane her!",
 ];
+
+// Model: Genererer et tilfeldig tall fra 0 til 4
+const model = {
+    getRandomEncounter: function() {
+        return Math.floor(Math.random() * 5);
+    }
+};
+
