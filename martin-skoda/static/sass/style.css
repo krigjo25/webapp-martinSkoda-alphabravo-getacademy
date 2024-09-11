@@ -1,14 +1,12 @@
 main aside .speed-o-meeter, main aside .annoyed-o-meeter, main aside .rep-o-meeter, main aside .cool-o-meeter {
-  width: 100%;
+  width: 10%;
   block-size: 2vh;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   border-radius: 12px;
   margin-block-end: 12px;
-  transform: translateX(width);
-  transition: width 1s linear;
-  background-color: green;
+  animation: pulse 1s ;
 }
 
 header {
@@ -40,4 +38,16 @@ main aside.values {
 main img {
   inline-size: 26vw;
   mix-blend-mode: multiply;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@keyframes pulse {
+    0% {
+      background-color: rgb(120, 6, 6);
+    }
+    50% {
+      background-color: #FFFF00;
+    }
+    100% {
+      background-color: rgb(102, 146, 61);
+    }
+  }
