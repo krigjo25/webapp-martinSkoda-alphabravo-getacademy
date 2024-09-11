@@ -134,7 +134,7 @@ const isAnnoyedPrompts = [
 let counter = 0;
 
 let annoyedValue = 0;
-let coolValue = 0;
+let coolValue = 1;
 let respectValue = 0;
 let speedValue = 0;
 

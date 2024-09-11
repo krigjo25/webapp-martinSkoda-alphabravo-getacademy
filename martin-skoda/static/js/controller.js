@@ -43,28 +43,25 @@ const controller = {
   
   // Starter encounter
   controller.handleEncounter();
-  
+
   coolvaluestat()
+
   function coolvaluestat(){
-      const coolmeter = document.getElementById("cool-label")
+      const coolmeter = document.getElementById("cool-o-meeter")
   
-      coolValue += `${randomCarPartIndex.coolnesFactor}`
   
+
+
       if(coolValue <= 25 & coolValue >= 0){
-          coolmeter.style.backgroundcolor = red;               
+          coolmeter.style.backgroundColor = "red";
       }
       else if(coolValue < 50 & coolValue > 25){
-          coolmeter.style.backgroundcolor = orange;               
+          coolmeter.style.backgroundColor  = "orange";               
       }
-      else if(coolValue <= 99 & coolValue <= 50){
-          coolmeter.style.backgroundcolor = green;               
+      else if(coolValue <= 100 & coolValue <= 50){
+          coolmeter.style.backgroundColor  = "green";               
       }
-      if (coolValue >= 100){
-          document.getElementById('app').innerHTML = /*HTML*/ `
-          
-          
-          `
-      }        
+            
    coolmeter.style.width = coolValue + "%"  
   
   }
