@@ -36,7 +36,7 @@ const controller = {
         // Beregn hastigheten basert på coolness factor
         speedValue = model.calculateSpeed(coolnessFactor); // Oppdaterer speedValue
   
-        // Viser meldingen og hastigheten
+        // Viser meldingen og oppdater hastigheten i HTML
         view.displayEncounter(message, speedValue);
     }
   };
