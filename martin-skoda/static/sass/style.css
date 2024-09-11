@@ -11,13 +11,6 @@ main aside .speed-o-meeter, main aside .annoyed-o-meeter, main aside .rep-o-meet
   background-color: green;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
 main div.road-map {
   inline-size: 66vw;
   block-size: 73vh;
