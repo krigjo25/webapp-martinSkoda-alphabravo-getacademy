@@ -2,8 +2,7 @@
 mainView()
 function mainView(){
     document.getElementById('app').innerHTML = /*HTML*/ `
-        <h1>Martin skoda</h1>
-            <h3>- Hvorfor skoda? Når na kan gå'a?</h3>
+
             <div class="road-map"></div>
             <aside id="values" class="values">
                 <div id="bar-o-meeter-container">
