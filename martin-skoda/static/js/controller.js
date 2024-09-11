@@ -55,15 +55,19 @@ function coolvaluestat() {
   let randompartcool = carParts[randompartnum].coolnesFactor;
 
   coolValue = coolValue + randompartcool;
-
-  if ((coolValue <= 25) & (coolValue >= 0)) {
-    coolmeter.style.backgroundColor = "red";
-  } else if ((coolValue < 50) & (coolValue > 25)) {
-    coolmeter.style.backgroundColor = "orange";
-  } else if ((coolValue <= 100) & (coolValue <= 50)) {
-    coolmeter.style.backgroundColor = "green";
-  }
   console.log(coolValue);
 
   coolmeter.style.width = coolValue + "%";
+  coolmeter.innerHTML = coolValue + "%"; 
+  
+}
+
+Rep()
+function Rep(){
+  const repmeter = document.getElementById("rep-o-meeter");
+
+  respectValue += (coolValue / 4)
+  repmeter.innerHTML = respectValue + "%"; 
+  repmeter.style.width = respectValue + "%"; 
+  console.log(respectValue);
 }

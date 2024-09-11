@@ -11,13 +11,13 @@ function mainView() {
                     <div id="annoyed-label" class="annoyed-label">Grandma's annoyance:</div>
                     <div id="annoyed-o-meeter" class="annoyed-o-meeter">0%</div>
                     
-                    <div id="rep-label" class="rep-label">Reputation:</div>
-                    <div id="rep-o-meeter" class="rep-o-meeter">0%</div>
+                    <div id="rep-label" class="rep-label" >Reputation:</div>
+                    <div id="rep-o-meeter" class="rep-o-meeter"  style="width: 0%">0%</div>
 
                     <div id="speed-label" class="speed-label">Speedster:</div>
                     <div id="speed-o-meeter" class="speed-o-meeter">0 km/t</div>
                     <div id="cool-label" class="cool-label">Fabiolus:</div>
-                    <div id="cool-o-meeter" class="cool-o-meeter" style="width: 0%; background-color: green" ></div>
+                    <div id="cool-o-meeter" class="cool-o-meeter" style="width: 0%" >0%</div>
                 </div>
 
             <div id="vehicle">
