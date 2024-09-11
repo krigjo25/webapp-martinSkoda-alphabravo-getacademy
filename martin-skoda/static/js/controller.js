@@ -1,5 +1,5 @@
 // Functions
-// Controller: Kobler sammen modell og view, bestemmer responsen og beregner hastigheten
+//@nico Controller: Kobler sammen modell og view, bestemmer responsen og beregner hastigheten
 const controller = {
     handleEncounter: function() {
         const randomPersonIndex = model.getRandomEncounter(people.length); // Velger en tilfeldig person

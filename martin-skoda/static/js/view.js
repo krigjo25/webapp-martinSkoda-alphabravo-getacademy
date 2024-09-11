@@ -30,7 +30,7 @@ function mainView() {
         </aside>`;
 }
 
-// Oppdatert View: Viser meldingen og hastigheten til brukeren, og oppdaterer HTML med hastigheten
+//@nico Oppdatert View: Viser meldingen og hastigheten til brukeren, og oppdaterer HTML med hastigheten
 const view = {
     displayEncounter: function(message, speed) {
         // Oppdater konsollen med meldingen
