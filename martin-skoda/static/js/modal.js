@@ -152,6 +152,8 @@ let coolValue = 1;
 let respectValue = 0;
 let speedValue = 0;
 
+
+
 //@nico Model: Genererer tilfeldige tall for person, bil-del, og beregner hastighet basert på coolness
 const model = {
   getRandomEncounter: function(listLength) {

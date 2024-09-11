@@ -17,7 +17,7 @@ function mainView() {
                     <div id="speed-label" class="speed-label">Speedster:</div>
                     <div id="speed-o-meeter" class="speed-o-meeter">0 km/t</div>
                     <div id="cool-label" class="cool-label">Fabiolus:</div>
-                    <div id="cool-o-meeter" class="cool-o-meeter" style="width: 10%; background-color: green" ></div>
+                    <div id="cool-o-meeter" class="cool-o-meeter" style="width: 0%; background-color: green" ></div>
                 </div>
 
             <div id="vehicle">
