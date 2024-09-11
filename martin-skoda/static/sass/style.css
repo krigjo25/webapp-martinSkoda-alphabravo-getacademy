@@ -19,8 +19,8 @@ main {
   justify-content: flex-start;
 }
 main div.road-map {
-  inline-size: 66vw;
-  block-size: 73vh;
+  inline-size: 44vw;
+  block-size: 45vh;
   background-image: url(../img/Geometric_of_roads.gif);
   background-repeat: no-repeat;
 }
