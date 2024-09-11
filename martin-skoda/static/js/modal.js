@@ -100,6 +100,20 @@ const people = [
     }
 ];
 
+//@nico Oppdatert View: Viser meldingen og hastigheten til brukeren, og oppdaterer HTML med hastigheten
+const view = {
+    displayEncounter: function(message, speed) {
+        // Oppdater konsollen med meldingen
+        console.log(`${message} Bilen kjører i ${speed} km/t.`);
+
+        // Oppdater hastigheten i HTML
+        const speedDisplay = document.getElementById("speed-o-meeter");
+        if (speedDisplay) {
+            speedDisplay.innerHTML = `${speed} km/t`; // Oppdater hastighetsmeteret
+        }
+    }
+};
+
 const coolPrompts = [
     "Den ser utrolig ut! Er den ny?",
     "Hvilken motor har du? Den høres kraftig ut!",

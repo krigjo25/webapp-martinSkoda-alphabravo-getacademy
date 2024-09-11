@@ -4,9 +4,8 @@
     user-select: none
     border-radius: 12px
     margin-block-end: 12px
-    transform: translateX(width)
-    transition:  width 1s linear
-    background-color: green
+    animation:  pulse 1s infinite
+
 
 header
     
@@ -41,3 +40,14 @@ main
     img
         inline-size: 26vw
         mix-blend-mode: multiply
+
+@keyframes pulse
+    from
+        0% 
+            background-color: rgb(120, 6, 6)
+        
+        50%
+            background-color: #FFFF00
+    to
+        100%
+            background-color: rgb(102, 146, 61)

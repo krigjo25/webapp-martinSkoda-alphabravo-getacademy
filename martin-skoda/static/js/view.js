@@ -12,34 +12,26 @@ function mainView() {
                     <div id="annoyed-o-meeter" class="annoyed-o-meeter"></div>
                     
                     <div id="rep-label" class="rep-label">Reputation:</div>
-                    <div id="rep-o-meeter" class="rep-o-meeter"></div>
+                    <div id="rep-o-meeter" class="rep-o-meeter">0%</div>
 
                     <div id="speed-label" class="speed-label">Speedster:</div>
                     <div id="speed-o-meeter" class="speed-o-meeter">0 km/t</div>
                     <div id="cool-label" class="cool-label">Fabiolus:</div>
-                    <div id="cool-o-meeter" class="cool-o-meeter"></div>
+                    <div id="cool-o-meeter" class="cool-o-meeter">0%</div>
                 </div>
 
             <div id="vehicle">
             <img src="static/img/rusty.jpg" alt="rusty.jpg"></div>
 
-            <div id="buddy-list"></div>
+            <div id="buddy-list">
             
+            </div>
+            <div>
+            <button> Update Speed </button><button> Update grandma's annoyance </button><button> Update  reps</button><button> Update Speed </button>
+            </div>
             <div id="aqured-parts"></div>
-
         </aside>`;
 }
+//updateView()
 
-//@nico Oppdatert View: Viser meldingen og hastigheten til brukeren, og oppdaterer HTML med hastigheten
-const view = {
-    displayEncounter: function(message, speed) {
-        // Oppdater konsollen med meldingen
-        console.log(`${message} Bilen kjører i ${speed} km/t.`);
 
-        // Oppdater hastigheten i HTML
-        const speedDisplay = document.getElementById("speed-o-meeter");
-        if (speedDisplay) {
-            speedDisplay.innerHTML = `${speed} km/t`; // Oppdater hastighetsmeteret
-        }
-    }
-};
