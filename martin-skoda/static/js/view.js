@@ -1,7 +1,7 @@
 //Update HTML
-mainView()
-function mainView(){
-    document.getElementById('app').innerHTML = /*HTML*/ `
+mainView();
+function mainView() {
+    document.getElementById("app").innerHTML = /*HTML*/ `
 
             <div class="road-map"></div>
             <aside id="values" class="values">
@@ -30,11 +30,9 @@ function mainView(){
         </aside>`;
 }
 
-// View: Viser meldingen til brukeren
+// View: Viser meldingen og hastigheten til brukeren
 const view = {
-    displayEncounter: function(message) {
-        console.log(message);
+    displayEncounter: function (message, speed) {
+        console.log(`${message} Bilen kjører i ${speed} km/t.`);
     }
 };
-
-
