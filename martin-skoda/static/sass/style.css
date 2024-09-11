@@ -11,12 +11,22 @@ main aside .speed-o-meeter, main aside .annoyed-o-meeter, main aside .rep-o-meet
   background-color: green;
 }
 
+header {
+  margin-block-end: 9vh;
+}
+header h1 {
+  text-align: center;
+}
+header h3 {
+  text-align: center;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 main div.road-map {
   inline-size: 46vw;
@@ -29,4 +39,5 @@ main aside.values {
 }
 main img {
   inline-size: 26vw;
+  mix-blend-mode: multiply;
 }/*# sourceMappingURL=style.css.map */
