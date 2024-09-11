@@ -61,9 +61,9 @@ const controller = {
 
 // Sett en timer som trigges hvert 5. sekund for å utføre et nytt encounter
 setInterval(controller.handleEncounter, 5000); // Utfører handleEncounter hver 5. sekund
-
+//amy
 coolvaluestat();
-
+//amy
 function coolvaluestat() {
     const coolmeter = document.getElementById("cool-o-meeter");
     let randompartnum = Math.floor(Math.random() * carParts.length);
