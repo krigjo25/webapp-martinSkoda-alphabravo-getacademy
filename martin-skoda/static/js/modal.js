@@ -87,7 +87,7 @@ const people = [
 
 //nico View: Viser meldingen og hastigheten til brukeren, og oppdaterer HTML med hastigheten
 const view = {
-    displayEncounter: function (message, speed) {
+    displayEncounter: function(message, speed) {
         // Oppdaterer meldingen i konsollen
         console.log(`${message} Bilen kjører i ${speed} km/t.`);
 
@@ -98,14 +98,26 @@ const view = {
         }
     },
 
+    updateCoolValue: function(coolValue) {
+        const coolMeter = document.getElementById("cool-o-meeter");
+
+        if (coolValue >= 0 && coolValue <= 25) {
+            coolMeter.style.backgroundColor = "red";
+        } else if (coolValue > 25 && coolValue <= 50) {
+            coolMeter.style.backgroundColor = "orange";
+        } else if (coolValue > 50 && coolValue <= 99) {
+            coolMeter.style.backgroundColor = "green";
+        }
+
+        coolMeter.style.width = coolValue + "%";
+    },
+
     // Funksjon for å oppdatere listen over installerte bildeler
-    updateInstalledParts: function (onCar) {
+    updateInstalledParts: function(onCar) {
         const partsDisplay = document.getElementById("aqured-parts");
 
         // Opprett en liste med installerte bildeler og vis den i HTML
-        partsDisplay.innerHTML = `<ul>${onCar
-            .map((part) => `<li>${part}</li>`)
-            .join("")}</ul>`;
+        partsDisplay.innerHTML = `<ul>${onCar.map(part => `<li>${part}</li>`).join('')}</ul>`;
     }
 };
 
