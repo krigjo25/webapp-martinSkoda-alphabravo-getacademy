@@ -101,15 +101,6 @@ const view = {
     updateCoolValue: function(coolValue) {
         const coolMeter = document.getElementById("cool-o-meeter");
 
-        // Forandre farge på baren basert på coolValue
-        if (coolValue >= 0 && coolValue <= 25) {
-            coolMeter.style.backgroundColor = "red";
-        } else if (coolValue > 25 && coolValue <= 50) {
-            coolMeter.style.backgroundColor = "orange";
-        } else if (coolValue > 50 && coolValue <= 99) {
-            coolMeter.style.backgroundColor = "green";
-        }
-
         coolMeter.style.width = coolValue + "%";
         coolMeter.innerHTML = coolValue + "%";
     },

@@ -8,7 +8,7 @@ function mainView() {
                 <div id="bar-o-meeter-container">
 
                     <div id="annoyed-label" class="annoyed-label">Grandma's annoyance:</div>
-                    <div id="annoyed-o-meeter" class="annoyed-o-meeter">0%</div>
+                    <div id="annoyed-o-meeter" class="annoyed-o-meeter" style="width: 0%">0%</div>
                     
                     <div id="rep-label" class="rep-label" >Reputation:</div>
                     <div id="rep-o-meeter" class="rep-o-meeter"  style="width: 0%">0%</div>
