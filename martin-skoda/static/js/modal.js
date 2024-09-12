@@ -101,6 +101,7 @@ const view = {
     updateCoolValue: function(coolValue) {
         const coolMeter = document.getElementById("cool-o-meeter");
 
+        // Forandre farge på baren basert på coolValue
         if (coolValue >= 0 && coolValue <= 25) {
             coolMeter.style.backgroundColor = "red";
         } else if (coolValue > 25 && coolValue <= 50) {
@@ -110,6 +111,15 @@ const view = {
         }
 
         coolMeter.style.width = coolValue + "%";
+        coolMeter.innerHTML = coolValue + "%";
+    },
+
+    // Funksjon for å oppdatere listen over installerte bildeler
+    updateAnnoyedValue: function(annoyedValue) {
+        const annoyedMeter = document.getElementById("annoyed-o-meeter");
+
+        annoyedMeter.style.width = annoyedValue + "%";
+        annoyedMeter.innerHTML = annoyedValue + "%";
     },
 
     // Funksjon for å oppdatere listen over installerte bildeler

@@ -1,62 +1,55 @@
 // Functions
 //@nico Controller: Kobler sammen modell og view, bestemmer responsen og beregner hastigheten
 const controller = {
-  handleEncounter: function () {
-    const randomPersonIndex = model.getRandomEncounter(people.length); // Velger en tilfeldig person
-    const randomCarPartIndex = model.getRandomEncounter(carParts.length); // Velger en tilfeldig bil-del
+    handleEncounter: function () {
+        const randomPersonIndex = model.getRandomEncounter(people.length); // Velger en tilfeldig person
+        const randomCarPartIndex = model.getRandomEncounter(carParts.length); // Velger en tilfeldig bil-del
 
-    const person = people[randomPersonIndex];
-    const carPart = carParts[randomCarPartIndex];
+        const person = people[randomPersonIndex];
+        const carPart = carParts[randomCarPartIndex];
 
-    // Starter meldingen med en introduksjon
-    let message = `${person.name} ser på bilen og legger merke til ${carPart.part}. `;
+        // Starter meldingen med en introduksjon
+        let message = `${person.name} ser på bilen og legger merke til ${carPart.part}. `;
 
-    // Hent coolnessFactor fra bil-delen
-    const coolnessFactor = carPart.coolnesFactor;
+        // Oppdater coolnessFactor og annoyedFactor basert på den valgte delen
+        if (!onCar.includes(carPart.part)) {
+            // Legg til delens coolnessFactor og annoyedFactor bare hvis delen ikke allerede er på bilen
+            coolValue += carPart.coolnesFactor;
+            annoyedValue += carPart.annoyedFactor;
 
-    // Velg riktig prompt basert på personens preferanser
-    if (person.likesCar) {
-      if (carPart.coolnesFactor > carPart.annoyedFactor) {
-        // Hvis delen er kulere enn den irriterer
-        const randomCoolPrompt =
-          coolPrompts[model.getRandomEncounter(coolPrompts.length)];
-        message += `${randomCoolPrompt}`;
-      } else {
-        // Hvis delen irriterer mer enn den er kul
-        const randomNotCoolPrompt =
-                    notCoolPrompts[
-                        model.getRandomEncounter(notCoolPrompts.length)
-                    ];
-        message += `${randomNotCoolPrompt}`;
-      }
-    }
+            // Legg til bildelen i onCar
+            onCar.push(carPart.part);
+        }
 
-    // Hvis personen er irritert (Bestemor i dette tilfellet)
-    if (person.isAnnoyed) {
-      const randomAnnoyedPrompt =
-                isAnnoyedPrompts[
-                    model.getRandomEncounter(isAnnoyedPrompts.length)
-                ];
-      message += ` ${randomAnnoyedPrompt}`;
-    }
+        // Velg riktig prompt basert på personens preferanser
+        if (person.likesCar) {
+            if (carPart.coolnesFactor > carPart.annoyedFactor) {
+                const randomCoolPrompt = coolPrompts[model.getRandomEncounter(coolPrompts.length)];
+                message += `${randomCoolPrompt}`;
+            } else {
+                const randomNotCoolPrompt = notCoolPrompts[model.getRandomEncounter(notCoolPrompts.length)];
+                message += `${randomNotCoolPrompt}`;
+            }
+        }
 
-    // Beregn hastigheten basert på coolness factor
-    speedValue = model.calculateSpeed(coolnessFactor); // Oppdaterer speedValue
+        // Hvis personen er irritert (Bestemor i dette tilfellet)
+        if (person.isAnnoyed) {
+            const randomAnnoyedPrompt = isAnnoyedPrompts[model.getRandomEncounter(isAnnoyedPrompts.length)];
+            message += ` ${randomAnnoyedPrompt}`;
+        }
+
+        // Beregn hastigheten basert på den totale coolness factor
+        speedValue = model.calculateSpeed(coolValue); // Oppdaterer speedValue
 
         // Oppdater meldingen og hastigheten i HTML
-    view.displayEncounter(message, speedValue);
-
-        // Legg til bildelen i onCar hvis den ikke allerede er installert
-        if (!onCar.includes(carPart.part)) {
-            onCar.push(carPart.part); // Legg til ny del
-        }
+        view.displayEncounter(message, speedValue);
 
         // Oppdater listen over installerte bildeler i HTML
         view.updateInstalledParts(onCar);
 
-        // Oppdater coolValue i HTML
-        const coolValue = carPart.coolnesFactor;
+        // Oppdater coolValue og annoyedValue i HTML
         view.updateCoolValue(coolValue);
+        view.updateAnnoyedValue(annoyedValue); // Lag denne funksjonen i view.js
     }
 };
 
