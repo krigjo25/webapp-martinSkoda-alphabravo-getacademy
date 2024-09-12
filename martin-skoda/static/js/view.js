@@ -24,13 +24,10 @@ function mainView() {
 
             <div id="buddy-list">
                 <div class="prompts">${}</div>
-            </div>
-            <div>
-            </div>
-            <div id="aqured-parts"></div>
-                <div class="prompt">${}</div>
                 <button>button1</button>
                 <button>button2</button>
+            </div>
+            <div id="aqured-parts"></div>
         </aside>`;
 }
 
