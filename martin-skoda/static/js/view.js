@@ -23,12 +23,18 @@ function mainView() {
             <img src="static/img/rusty.jpg" alt="rusty.jpg"></div>
 
             <div id="buddy-list">
-            
+                <div class="prompts">${}</div>
             </div>
             <div>
-            <button> Update Speed </button><button> Update grandma's annoyance </button><button> Update  reps</button><button> Update Speed </button>
+            <button> Update Speed </button>
+            <button> Update grandma's annoyance </button>
+            <button> Update  reps</button>
+            <button> Update Speed </button>
             </div>
             <div id="aqured-parts"></div>
+                <div class="prompt">${}</div>
+                <button>button1</button>
+                <button>button2</button>
         </aside>`;
 }
 
